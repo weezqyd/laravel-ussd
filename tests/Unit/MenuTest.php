@@ -4,6 +4,7 @@ namespace Sparors\Ussd\Tests\Unit;
 
 use Sparors\Ussd\Menu;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 final class MenuTest extends TestCase
 {
@@ -90,7 +91,7 @@ final class MenuTest extends TestCase
         );
     }
 
-    /** @dataProvider data_true_or_false */
+    #[DataProvider('data_true_or_false')]
     public function test_menu_can_conditionally_adjusted_with_when($expected, $condition)
     {
         $this->assertEquals(
@@ -105,7 +106,7 @@ final class MenuTest extends TestCase
         );
     }
 
-    /** @dataProvider data_true_or_false */
+    #[DataProvider('data_true_or_false')]
     public function test_menu_can_conditionally_adjusted_with_unless($expected, $condition)
     {
         $this->assertEquals(
