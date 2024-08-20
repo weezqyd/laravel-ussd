@@ -4,10 +4,11 @@ namespace Sparors\Ussd\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Sparors\Ussd\Decisions\Between;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 final class DecisionTest extends TestCase
 {
-    /** @dataProvider data_between_decision*/
+    #[DataProvider('data_between_decision')]
     public function test_between_decision_works($value, $bool)
     {
         $decision = new Between(5, 10);

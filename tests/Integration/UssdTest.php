@@ -606,7 +606,7 @@ final class UssdTest extends TestCase
         );
     }
 
-    /** @dataProvider configurator_as */
+    #[DataProvider('configurator_as')]
     public function test_it_can_make_use_of_a_configurator($operator, $configurator)
     {
         $this->assertEquals(

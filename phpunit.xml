@@ -6,12 +6,7 @@
   testdox="true"
   processIsolation="false"
   stopOnFailure="false"
-  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd">
-  <coverage>
-    <include>
-      <directory>src/</directory>
-    </include>
-  </coverage>
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.3/phpunit.xsd">
   <testsuites>
     <testsuite name="Unit">
       <directory suffix=".php">./tests/Unit/</directory>
@@ -20,4 +15,9 @@
       <directory suffix=".php">./tests/Integration/</directory>
     </testsuite>
   </testsuites>
+  <source>
+    <include>
+      <directory>src/</directory>
+    </include>
+  </source>
 </phpunit>
